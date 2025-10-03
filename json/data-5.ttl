@@ -1,0 +1,33 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/vocabulary/> .
+
+@prefix plr: <http://example.org/players/> .
+@prefix jer: <http://example.org/jerseys/> .
+@prefix xfac: <http://example.org/x-factors/> .
+@prefix team: <http://example.org/teams/> .
+
+plr:braydenPoint a ex:Player ;
+    ex:name "Brayden Point"@en ;
+    ex:nickname "foody"@en .
+plr:nikitaKucherov a ex:Player ;
+    ex:name "Nikita Kucherov"@en ;
+    ex:nickname "sneaky"@en .
+plr:jurkoSlafkovsky a ex:Player ;
+    ex:name "Juraj Slafkovsky"@en ;
+    ex:nickname "slafgoalsky"@en, "newbie"@en .
+plr:wayneGretzky a ex:Player ;
+    ex:name "Wayne Gretzky"@en ;
+    ex:nickname "The Great One"@en .
+
+plr:wayneGretzky ex:wears jer:jersey1 .
+plr:jurkoSlafkovsky ex:wears jer:jersey2 .
+plr:braydenPoint ex:wears jer:jersey3 .
+plr:nikitaKucherov ex:wears jer:jersey4 .
+
+plr:braydenPoint ex:excels xfac:xfactor1 .
+plr:braydenPoint ex:excels xfac:xfactor2 .
+plr:wayneGretzky ex:excels xfac:xfactor1 .
+
+plr:slafgoalsky ex:plays team:montrealCanadiens .
+plr:braydenPoint ex:plays team:tampaBayLightning .
+plr:nikitaKucherov ex:plays team:tampaBayLightning .

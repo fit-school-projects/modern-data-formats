@@ -1,0 +1,20 @@
+# 1. Hráči s číslom dresu 21 a x-faktorom s názvom Yoink!
+
+prefix ex: <http://example.org/vocabulary/>
+prefix coach: <http://example.org/coaches/>  
+prefix jer: <http://example.org/jerseys/> 
+prefix team: <http://example.org/teams/>  
+prefix xfac: <http://example.org/x-factors/> 
+prefix plr: <http://example.org/players>
+
+SELECT ?name 
+WHERE {
+  ?plr a ex:Player ;
+  	ex:name ?name ;
+  	ex:wears ?jer ;
+  	ex:excels ?xfac .
+  ?xfac ex:title ?title .
+  FILTER (STRSTARTS(?title, "Yoink!"))
+  ?jer ex:number ?number .
+  FILTER (?number = 21)	
+}

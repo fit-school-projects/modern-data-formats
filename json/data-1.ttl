@@ -1,0 +1,17 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/vocabulary/> .
+
+@prefix coach: <http://example.org/coaches/> . 
+@prefix team: <http://example.org/teams/> . 
+
+coach:jonCooper a ex:Coach ;
+    ex:name "Jon Cooper"@en ;
+    ex:levelOfExperience 7 ;
+    ex:dateOfBirth "1967-08-23"^^xsd:date .
+coach:martinStLuis a ex:Coach ;
+    ex:name "Martin St. Luis"@en ;
+    ex:levelOfExperience 3 ;
+    ex:dateOfBirth "1985-11-30"^^xsd:date .
+
+coach:jonCooper ex:coaches team:tampaBayLightning .
+coach:martinStLuis ex:coaches team:montrealCanadiens .

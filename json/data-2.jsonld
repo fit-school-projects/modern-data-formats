@@ -1,0 +1,126 @@
+[
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "jer": "http://example.org/jerseys/",
+            "plr": "http://example.org/players/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "number": {
+                "@id": "ex:number",
+                "@type": "xsd:integer"
+            },
+            "size": {
+                "@id": "ex:size",
+                "@container": "@language" 
+            },
+            "players": {
+                "@id": "ex:isUsed",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Jersey",
+        "iri": "jer:jersey1",
+        "number": 99,
+        "size": {
+            "en": "S"
+        },
+        "players": [
+            "plr:wayneGretzky"
+        ]
+    },
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "jer": "http://example.org/jerseys/",
+            "plr": "http://example.org/players/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "number": {
+                "@id": "ex:number",
+                "@type": "xsd:integer"
+            },
+            "size": {
+                "@id": "ex:size",
+                "@container": "@language" 
+            },
+            "players": {
+                "@id": "ex:isUsed",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Jersey",
+        "iri": "jer:jersey4",
+        "number": 86,
+        "size": {
+            "en": "L"
+        },
+        "players": [
+            "plr:nikitaKucherov"
+        ]
+    },
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "jer": "http://example.org/jerseys/",
+            "plr": "http://example.org/players/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "number": {
+                "@id": "ex:number",
+                "@type": "xsd:integer"
+            },
+            "size": {
+                "@id": "ex:size",
+                "@container": "@language" 
+            },
+            "players": {
+                "@id": "ex:isUsed",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Jersey",
+        "iri": "jer:jersey3",
+        "number": 21,
+        "size": {
+            "en": "M"
+        },
+        "players": [
+            "plr:braydenPoint"
+        ]
+    },
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "jer": "http://example.org/jerseys/",
+            "plr": "http://example.org/players/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "number": {
+                "@id": "ex:number",
+                "@type": "xsd:integer"
+            },
+            "size": {
+                "@id": "ex:size",
+                "@container": "@language" 
+            },
+            "players": {
+                "@id": "ex:isUsed",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Jersey",
+        "iri": "jer:jersey2",
+        "number": 20,
+        "size": {
+            "en": "L"
+        },
+        "players": [
+            "plr:jurkoSlafkovsky"
+        ]
+    }
+]

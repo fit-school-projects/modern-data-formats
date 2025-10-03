@@ -1,0 +1,216 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/vocabulary/> .
+
+#custom prefixes
+@prefix coach: <http://example.org/coaches/> . 
+@prefix jer: <http://example.org/jerseys/> .
+@prefix team: <http://example.org/teams/> . 
+@prefix xfac: <http://example.org/x-factors/> .
+@prefix plr: <http://example.org/players/> .
+
+#set-up of the class Coach
+ex:Coach a rdfs:Class ;
+    rdfs:label "Tréner"@sk .
+
+ex:name a rdf:Property ;
+    rdfs:label "Meno trénera"@sk ;
+    rdfs:domain ex:Coach ;
+    rdfs:range xsd:langString .
+
+ex:levelOfExperience a rdf:Property ;
+    rdfs:label "Level skúseností"@sk ;
+    rdfs:domain ex:Coach ;
+    rdfs:range xsd:integer .
+
+ex:dateOfBirth a rdf:Property ;
+    rdfs:label "Dátum narodenia"@sk ;
+    rdfs:domain ex:Coach ;
+    rdfs:range xsd:date .
+
+#set-up of the class Jersey
+ex:Jersey a rdfs:Class ;
+    rdfs:label "Dres"@sk .
+
+ex:number a rdf:Property ;
+    rdfs:label "Číslo dresu"@sk ;
+    rdfs:domain ex:Jersey ;
+    rdfs:range xsd:integer .
+
+ex:size a rdf:Property ;
+    rdfs:label "Veľkosť dresu"@sk ;
+    rdfs:domain ex:Jersey ;
+    rdfs:range xsd:langString .
+
+#set-up of the class x-factor
+ex:Xfactor a rdfs:Class ;
+    rdfs:label "Schopnosť"@sk .
+
+ex:title a rdf:Property ;
+    rdfs:label "Názov"@sk ;
+    rdfs:domain ex:Xfactor ;
+    rdfs:range xsd:langString .
+
+ex:description a rdf:Property ;
+    rdfs:label "Popis x-faktoru"@sk ;
+    rdfs:domain ex:Xfactor ;
+    rdfs:range xsd:langString .
+
+#set-up of the class Player
+ex:Player a rdfs:Class ;
+    rdfs:label "Hráč"@sk .
+
+ex:name a rdf:Property ;
+    rdfs:label "Meno"@sk ;
+    rdfs:domain ex:Player ;
+    rdfs:range xsd:langString .
+
+ex:nickname a rdf:Property ;
+    rdfs:label "Prezývka"@sk ;
+    rdfs:domain ex:Player ;
+    rdfs:range xsd:langString .
+
+#set-up of the class Team
+ex:Team a rdfs:Class ;
+    rdfs:label "Tím"@sk .
+
+ex:title a rdf:Property ;
+    rdfs:label "Názov tímu"@sk ;
+    rdfs:domain ex:Team ;
+    rdfs:range xsd:langString .
+
+ex:numberOfFans a rdf:Property ;
+    rdfs:label "Počet fanúšikov"@sk ;
+    rdfs:domain ex:Team ;
+    rdfs:range xsd:integer .
+
+#filling of the dats coaches
+coach:jonCooper a ex:Coach ;
+    ex:name "Jon Cooper"@en ;
+    ex:levelOfExperience 7 ;
+    ex:dateOfBirth "1967-08-23"^^xsd:date .
+coach:martinStLuis a ex:Coach ;
+    ex:name "Martin St. Luis"@en ;
+    ex:levelOfExperience 3 ;
+    ex:dateOfBirth "1985-11-30"^^xsd:date .
+#filling of the dats jerseys
+jer:jersey1 a ex:Jersey ;
+    ex:number 99 ;
+    ex:size "S"@en .
+jer:jersey2 a ex:Jersey ;
+    ex:number 20 ;
+    ex:size "L"@en .
+jer:jersey3 a ex:Jersey ;
+    ex:number 21 ;
+    ex:size "M"@en .
+jer:jersey4 a ex:Jersey ;
+    ex:number 86 ;
+    ex:size "L"@en .
+#filling of the dats x-factors
+xfac:xfactor1 a ex:Xfactor ;
+    ex:title "Yoink!"@en ;
+    ex:description "Snatch that puck away with a higher stick lift success rate, and leave them hanging while they take longer than usual to recover from your trickery."@en .
+xfac:xfactor2 a ex:Xfactor ;
+    ex:title "Magnetic"@en ;
+    ex:description "Make that loose puck yours with this brilliant ability to pick up them up with speed, as well as coral bouncing or rolling pucks easily, and snatch up poor passes."@en .
+xfac:xfactor3 a ex:Xfactor ;
+    ex:title "Third eye"@en ;
+    ex:description "There are no blind spots for you when your Third Eye activates. Use this ability to hit seemingly impossible passes to teammates outside your field of vision."@en .
+#filling of the dats teams
+team:tampaBayLightning a ex:Team ;
+    ex:title "Tampa Bay Lightning"@en ;
+    ex:numberOfFans 21600 .
+team:montrealCanadiens a ex:Team ;
+    ex:title "Montreal Canadiens"@en ;
+    ex:numberOfFans 15000 .
+#filling of the dats players
+plr:braydenPoint a ex:Player ;
+    ex:name "Brayden Point"@en ;
+    ex:nickname "foody"@en .
+plr:nikitaKucherov a ex:Player ;
+    ex:name "Nikita Kucherov"@en ;
+    ex:nickname "sneaky"@en .
+# nickname moze byt [0..*]
+plr:jurkoSlafkovsky a ex:Player ;
+    ex:name "Juraj Slafkovsky"@en ;
+    ex:nickname "slafgoalsky"@en, "newbie"@en .
+plr:wayneGretzky a ex:Player ;
+    ex:name "Wayne Gretzky"@en ;
+    ex:nickname "The Great One"@en .
+
+#definition bewtween team and coach
+ex:coaches a rdf:Property ;
+    rdfs:label "Trénuje"@sk ;
+    rdfs:domain ex:Coach ;
+    rdfs:range ex:Team .
+
+ex:isCoached a rdf:Property ;
+    rdfs:label "Je zastúpený"@sk ;
+    rdfs:domain ex:Team ;
+    rdfs:range ex:Coach .
+
+coach:jonCooper ex:coaches team:tampaBayLightning .
+coach:martinStLuis ex:coaches team:montrealCanadiens .
+team:tampaBayLightning ex:isCoached coach:jonCooper .
+team:montrealCanadiens ex:isCoached coach:martinStLuis .
+
+#definition between player and jersey
+ex:wears a rdf:Property ;
+    rdfs:label "Oblieka"@sk ;
+    rdfs:domain ex:Player ;
+    rdfs:range ex:Jersey .
+
+ex:isUsed a rdf:Property ;
+    rdfs:label "Je používaný"@sk ;
+    rdfs:domain ex:Jersey ;
+    rdfs:range ex:Player .
+
+plr:wayneGretzky ex:wears jer:jersey1 .
+plr:jurkoSlafkovsky ex:wears jer:jersey2 .
+plr:braydenPoint ex:wears jer:jersey3 .
+plr:nikitaKucherov ex:wears jer:jersey4 .
+
+jer:jersey1 ex:isUsed plr:wayneGretzky .
+jer:jersey2 ex:isUsed plr:jurkoSlafkovsky .
+jer:jersey3 ex:isUsed plr:braydenPoint .
+jer:jersey4 ex:isUsed plr:nikitaKucherov .
+
+#definition between player and xfactor
+ex:excels a rdf:Property ;
+    rdfs:label "Exceluje"@sk ;
+    rdfs:domain ex:Player ;
+    rdfs:range ex:Xfactor .
+
+ex:isPerformedBy a rdf:Property ;
+    rdfs:label "Nadobúda"@sk ;
+    rdfs:domain ex:Xfactor ;
+    rdfs:range ex:Player .
+
+plr:braydenPoint ex:excels xfac:xfactor1 .
+plr:braydenPoint ex:excels xfac:xfactor2 .
+plr:wayneGretzky ex:excels xfac:xfactor1 .
+
+xfac:xfactor1 ex:isPerformedBy plr:braydenPoint .
+xfac:xfactor2 ex:isPerformedBy plr:braydenPoint .
+xfac:xfactor1 ex:isPerformedBy plr:wayneGretzky .
+
+#definition between player and team
+ex:plays a rdf:Property ;
+    rdfs:label "Hrá za"@sk ;
+    rdfs:domain ex:Player ;
+    rdfs:range ex:Team .
+
+ex:isFormedBy a rdf:Property ;
+    rdfs:label "Je tvorený"@sk ;
+    rdfs:domain ex:Team ;
+    rdfs:range ex:Player .
+
+plr:slafgoalsky ex:plays team:montrealCanadiens .
+plr:braydenPoint ex:plays team:tampaBayLightning .
+plr:nikitaKucherov ex:plays team:tampaBayLightning .
+team:tampaBayLightning ex:isFormedBy plr:nikitaKucherov .
+team:tampaBayLightning ex:isFormedBy plr:braydenPoint .
+team:montrealCanadiens ex:isFormedBy plr:jurkoSlafkovsky .
+
+

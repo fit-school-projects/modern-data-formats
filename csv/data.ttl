@@ -1,0 +1,88 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/x-factors/xfactor3> a <http://example.org/vocabulary/Xfactor>;
+  <http://example.org/vocabulary/description> "There are no blind spots for you when your Third Eye activates. Use this ability to hit seemingly impossible passes to teammates outside your field of vision."@en;
+  <http://example.org/vocabulary/title> "Third eye"@en .
+
+<http://example.org/coaches/jonCooper> a <http://example.org/vocabulary/Coach>;
+  <http://example.org/vocabulary/coaches> <http://example.org/teams/tampaBayLightning>;
+  <http://example.org/vocabulary/dateOfBirth> "1967-08-23"^^xsd:date;
+  <http://example.org/vocabulary/levelOfExperience> 7;
+  <http://example.org/vocabulary/name> "Jon Cooper"@en .
+
+<http://example.org/coaches/martinStLuis> a <http://example.org/vocabulary/Coach>;
+  <http://example.org/vocabulary/coaches> <http://example.org/teams/montrealCanadiens>;
+  <http://example.org/vocabulary/dateOfBirth> "1985-11-30"^^xsd:date;
+  <http://example.org/vocabulary/levelOfExperience> 3;
+  <http://example.org/vocabulary/name> "Martin St. Luis"@en .
+
+<http://example.org/jerseys/jersey1> a <http://example.org/vocabulary/Jersey>;
+  <http://example.org/vocabulary/isUsed> <http://example.org/players/wayneGretzky>;
+  <http://example.org/vocabulary/number> 99;
+  <http://example.org/vocabulary/size> " S"@en .
+
+<http://example.org/jerseys/jersey2> a <http://example.org/vocabulary/Jersey>;
+  <http://example.org/vocabulary/isUsed> <http://example.org/players/jurkoSlafkovsky>;
+  <http://example.org/vocabulary/number> 86;
+  <http://example.org/vocabulary/size> " L"@en .
+
+<http://example.org/jerseys/jersey3> a <http://example.org/vocabulary/Jersey>;
+  <http://example.org/vocabulary/isUsed> <http://example.org/players/braydenPoint>;
+  <http://example.org/vocabulary/number> 21;
+  <http://example.org/vocabulary/size> " M"@en .
+
+<http://example.org/jerseys/jersey4> a <http://example.org/vocabulary/Jersey>;
+  <http://example.org/vocabulary/isUsed> <http://example.org/players/nikitaKucherov>;
+  <http://example.org/vocabulary/number> 20;
+  <http://example.org/vocabulary/size> " L"@en .
+
+<http://example.org/x-factors/xfactor2> a <http://example.org/vocabulary/Xfactor>;
+  <http://example.org/vocabulary/description> "Make that loose puck yours with this brilliant ability to pick up them up with speed, as well as coral bouncing or rolling pucks easily, and snatch up poor passes."@en;
+  <http://example.org/vocabulary/isPerformedBy> <http://example.org/players/braydenPoint>;
+  <http://example.org/vocabulary/title> "Magnetic"@en .
+
+<http://example.org/players/jurkoSlafkovsky> a <https://example.org/vocabulary/Player>;
+  <http://example.org/vocabulary/plays> <http://example.org/teams/montrealCanadiens>;
+  <http://example.org/vocabulary/wears> <http://example.org/jerseys/jersey2>;
+  <https://example.org/vocabulary/name> "Juraj Slafkovsky"@en;
+  <https://example.org/vocabulary/nickname> "slafgoalsky"@en .
+
+<http://example.org/players/nikitaKucherov> a <https://example.org/vocabulary/Player>;
+  <http://example.org/vocabulary/plays> <http://example.org/teams/tampaBayLightning>;
+  <http://example.org/vocabulary/wears> <http://example.org/jerseys/jersey4>;
+  <https://example.org/vocabulary/name> "Nikita Kucherov"@en;
+  <https://example.org/vocabulary/nickname> "sneaky"@en .
+
+<http://example.org/players/wayneGretzky> a <https://example.org/vocabulary/Player>;
+  <http://example.org/vocabulary/excels> <http://example.org/x-factors/xfactor1>;
+  <http://example.org/vocabulary/wears> <http://example.org/jerseys/jersey1>;
+  <https://example.org/vocabulary/name> "Wayne Gretzky"@en;
+  <https://example.org/vocabulary/nickname> "The Great One"@en .
+
+<http://example.org/teams/montrealCanadiens> a <http://example.org/vocabulary/Team>;
+  <http://example.org/vocabulary/isCoached> <http://example.org/coaches/martinStLuis>;
+  <http://example.org/vocabulary/isFormedBy> <http://example.org/players/jurkoSlafkovsky>;
+  <http://example.org/vocabulary/numberOfFans> 15000;
+  <http://example.org/vocabulary/title> "Montreal Canadiens"@en .
+
+<http://example.org/x-factors/xfactor1> a <http://example.org/vocabulary/Xfactor>;
+  <http://example.org/vocabulary/description> "Snatch that puck away with a higher stick lift success rate, and leave them hanging while they take longer than usual to recover from your trickery."@en;
+  <http://example.org/vocabulary/isPerformedBy> <http://example.org/players/braydenPoint>,
+    <http://example.org/players/wayneGretzky>;
+  <http://example.org/vocabulary/title> "Yoink!"@en .
+
+<http://example.org/teams/tampaBayLightning> a <http://example.org/vocabulary/Team>;
+  <http://example.org/vocabulary/isCoached> <http://example.org/coaches/jonCooper>;
+  <http://example.org/vocabulary/isFormedBy> <http://example.org/players/nikitaKucherov>,
+    <http://example.org/players/braydenPoint>;
+  <http://example.org/vocabulary/numberOfFans> 21600;
+  <http://example.org/vocabulary/title> "Tampa Bay Lightning"@en .
+
+<http://example.org/players/braydenPoint> a <https://example.org/vocabulary/Player>;
+  <http://example.org/vocabulary/excels> <http://example.org/x-factors/xfactor1>,
+    <http://example.org/x-factors/xfactor2>;
+  <http://example.org/vocabulary/plays> <http://example.org/teams/tampaBayLightning>;
+  <http://example.org/vocabulary/wears> <http://example.org/jerseys/jersey3>;
+  <https://example.org/vocabulary/name> "Brayden Point"@en;
+  <https://example.org/vocabulary/nickname> "foody"@en .

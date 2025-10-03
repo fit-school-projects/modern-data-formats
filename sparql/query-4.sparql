@@ -1,0 +1,19 @@
+# Dotaz, ktorý skonštruuje RDF graf nad číslom a veľkosťou dresu a vytvorí tak atribut fullJersey s číslom a veľkosťou  
+
+prefix ex: <http://example.org/vocabulary/>
+prefix coach: <http://example.org/coaches/>  
+prefix jer: <http://example.org/jerseys/> 
+prefix team: <http://example.org/teams/>  
+prefix xfac: <http://example.org/x-factors/> 
+prefix plr: <http://example.org/players>
+
+CONSTRUCT {
+  ?jer a ex:Jersey ;
+    ex:jersey ?fullJersey 
+}
+WHERE {
+  ?jer a ex:Jersey ;
+	ex:number ?number ;
+    ex:size ?size .
+  BIND(CONCAT(str(?number), " ", ?size) AS ?fullJersey) 
+}

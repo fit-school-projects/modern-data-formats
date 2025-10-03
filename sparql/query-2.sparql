@@ -1,0 +1,24 @@
+# Hráči z Tampy Bay Lightning s dresom veľkosti M.
+
+prefix ex: <http://example.org/vocabulary/>
+prefix coach: <http://example.org/coaches/>  
+prefix jer: <http://example.org/jerseys/> 
+prefix team: <http://example.org/teams/>  
+prefix xfac: <http://example.org/x-factors/> 
+prefix plr: <http://example.org/players>
+
+SELECT ?name ?size 
+WHERE {
+  ?plr a ex:Player ;
+  	ex:name ?name ;
+  	ex:wears ?jer ;
+  	ex:plays ?team .
+  ?team ex:title ?title .
+  FILTER (STRSTARTS(?title, "Tampa Bay Lightning"))
+  ?jer ex:size ?size .
+  FILTER (STRSTARTS(?size, "M"))	
+}
+
+
+
+

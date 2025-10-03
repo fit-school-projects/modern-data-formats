@@ -1,0 +1,384 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "TableGroup",
+    "@id": "http://example.org/data.csv-metadata.json",
+    "dc:description": "Jerseys",
+    "tables": [
+        {
+            "@id": "http://example.org/jerseys.csv-metadata.json",
+            "@type": "Table",
+            "url": "jerseys.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "{+iri}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "iri",
+                        "titles": "iri",
+                        "dc:description": "Jersey iri",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://example.org/vocabulary/Jersey"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "number",
+                        "titles": "number",
+                        "dc:description": "Number on the jersey",
+                        "required": true,
+                        "datatype": "integer",
+                        "propertyUrl": "http://example.org/vocabulary/number"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "size",
+                        "titles": "size",
+                        "dc:description": "Size on the jersey",
+                        "required":true,
+                        "datatype": "string",
+                        "lang": "en",
+                        "propertyUrl": "http://example.org/vocabulary/size"
+                    }               
+                ],
+                "primaryKey": "iri"
+            }
+        },
+        {
+            "@id": "http://example.org/player_jersey.csv-metadata.json",
+            "@type": "Table",
+            "url": "player_jersey.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "player_iri",
+                        "titles": "player_iri",
+                        "dc:description": "Player IRI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "aboutUrl": "{+jersey_iri}",
+                        "propertyUrl": "http://example.org/vocabulary/isUsed",
+                        "valueUrl": "{+player_iri}"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "jersey_iri",
+                        "titles": "jersey_iri",
+                        "dc:description": "Jersey IRI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "aboutUrl": "{+player_iri}",
+                        "propertyUrl": "http://example.org/vocabulary/wears",
+                        "valueUrl": "{+jersey_iri}"
+                    }
+                ],
+                "primaryKey": [
+                    "jersey_iri",
+                    "player_iri"
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "jersey_iri",
+                        "reference": {
+                            "resource": "jerseys.csv",
+                            "columnReference": "iri"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "http://example.org/coaches.csv-metadata.json",
+            "@type": "Table",
+            "url": "coaches.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "{+iri}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "iri",
+                        "titles": "iri",
+                        "dc:description": "Coach iri",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://example.org/vocabulary/Coach"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "name",
+                        "titles": "name",
+                        "dc:description": "Coach name",
+                        "required": true,
+                        "datatype": "string",
+                        "lang": "en",
+                        "propertyUrl": "http://example.org/vocabulary/name"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "levelOfExperience",
+                        "titles": "levelOfExperience",
+                        "dc:description": "Coach level of experience",
+                        "required": true,
+                        "datatype": "integer",
+                        "propertyUrl": "http://example.org/vocabulary/levelOfExperience"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "dateOfBirth",
+                        "titles": "dateOfBirth",
+                        "dc:description": "Coach date of birth",
+                        "required": true,
+                        "datatype": "date",
+                        "propertyUrl": "http://example.org/vocabulary/dateOfBirth"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "team_iri",
+                        "titles": "team_iri",
+                        "dc:description": "Coach coaches team",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "http://example.org/vocabulary/coaches",
+                        "valueUrl": "{team_iri}"
+                    }
+                ],
+                "primaryKey": "iri"
+            }
+        },
+        {
+            "@id": "https://example.org/players.csv-metadata.json",
+            "@type": "Table",
+            "url": "players.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "{+iri}",
+                "columns": [
+                   {
+                        "@type": "Column",
+                        "name": "iri",
+                        "titles": "iri",
+                        "dc:description": "Player iri",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "https://example.org/vocabulary/Player"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "name",
+                        "titles": "name",
+                        "dc:description": "Player name",
+                        "required": true,
+                        "datatype": "string",
+                        "lang": "en",
+                        "propertyUrl": "https://example.org/vocabulary/name"
+                    },
+                    {
+                        "@type":"Column",
+                        "name":"nickname",
+                        "titles":"nickname",
+                        "dc:description":"Player nickname",
+                        "datatype":"string",
+                        "lang":"en",
+                        "propertyUrl":"https://example.org/vocabulary/nickname"
+                    }
+                ],
+                "primaryKey": "iri"
+            }
+        },
+        {
+            "@id": "http://example.org/player_team.csv-metadata.json",
+            "@type": "Table",
+            "url": "player_team.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "player_iri",
+                        "titles": "player_iri",
+                        "dc:description": "Player IRI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "aboutUrl": "{+team_iri}",
+                        "propertyUrl": "http://example.org/vocabulary/isFormedBy",
+                        "valueUrl": "{+player_iri}"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "team_iri",
+                        "titles": "team_iri",
+                        "dc:description": "Team IRI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "aboutUrl": "{+player_iri}",
+                        "propertyUrl": "http://example.org/vocabulary/plays",
+                        "valueUrl": "{+team_iri}"
+                    }
+                ],
+                "primaryKey": [
+                    "player_iri",
+                    "team_iri"
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "team_iri",
+                        "reference": {
+                            "resource": "teams.csv",
+                            "columnReference": "iri"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "http://example.org/player_xfactor.csv-metadata.json",
+            "@type": "Table",
+            "url": "player_xfactor.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "player_iri",
+                        "titles": "player_iri",
+                        "dc:description": "Player IRI",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "aboutUrl": "{+xfactor_iri}",
+                        "propertyUrl": "http://example.org/vocabulary/isPerformedBy",
+                        "valueUrl": "{+player_iri}"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "xfactor_iri",
+                        "titles": "xfactor_iri",
+                        "dc:description": "Xfactor iri",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "aboutUrl": "{+player_iri}",
+                        "propertyUrl": "http://example.org/vocabulary/excels",
+                        "valueUrl": "{+xfactor_iri}"
+                    }
+                ],
+                "primaryKey": [
+                    "player_iri",
+                    "xfactor_iri"
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "xfactor_iri",
+                        "reference": {
+                            "resource": "xfactors.csv",
+                            "columnReference": "iri"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "http://example.org/teams.csv-metadata.json",
+            "@type": "Table",
+            "url": "teams.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "{+iri}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "iri",
+                        "titles": "iri",
+                        "dc:description": "Team iri",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://example.org/vocabulary/Team"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "title",
+                        "titles": "title",
+                        "dc:description": "Team title",
+                        "required": true,
+                        "datatype": "string",
+                        "lang": "en",
+                        "propertyUrl": "http://example.org/vocabulary/title"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "numberOfFans",
+                        "titles": "numberOfFans",
+                        "dc:description": "Team number of fans",
+                        "required": true,
+                        "datatype": "integer",
+                        "propertyUrl": "http://example.org/vocabulary/numberOfFans"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "coach_iri",
+                        "titles": "coach_iri",
+                        "dc:description": "Team coach",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "http://example.org/vocabulary/isCoached",
+                        "valueUrl": "{coach_iri}"
+                    }
+                ],
+                "primaryKey": "iri"
+            }
+        },
+        {
+            "@id": "http://example.org/xfactors.csv-metadata.json",
+            "@type": "Table",
+            "url": "xfactors.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "{+iri}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "name": "iri",
+                        "titles": "iri",
+                        "dc:description": "Xfactor iri",
+                        "required": true,
+                        "datatype": "anyURI",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://example.org/vocabulary/Xfactor"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "title",
+                        "titles": "title",
+                        "dc:description": "Xfactor title",
+                        "required": true,
+                        "datatype": "string",
+                        "lang": "en",
+                        "propertyUrl": "http://example.org/vocabulary/title"
+                    },
+                    {
+                        "@type": "Column",
+                        "name": "description",
+                        "titles": "description",
+                        "dc:description": "Description of xfactor",
+                        "required": true,
+                        "datatype": "string",
+                        "lang": "en",
+                        "propertyUrl": "http://example.org/vocabulary/description"
+                    }
+                ],
+                "primaryKey": "iri"
+            }
+        }
+    ]
+}
+

@@ -1,0 +1,25 @@
+# Počet fanúšikov všetkých tímov usporiadaný od najväčšieho po najmenší.
+
+prefix ex: <http://example.org/vocabulary/>
+prefix coach: <http://example.org/coaches/>  
+prefix jer: <http://example.org/jerseys/> 
+prefix team: <http://example.org/teams/>  
+prefix xfac: <http://example.org/x-factors/> 
+prefix plr: <http://example.org/players>
+
+SELECT ?title ?numberOfFans
+WHERE {
+  ?team a ex:Team ;
+  	ex:title ?title ;
+  	ex:numberOfFans ?numberOfFans .
+}
+ORDER BY DESC(?numberOfFans)
+
+
+
+
+
+
+
+
+

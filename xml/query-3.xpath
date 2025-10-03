@@ -1,0 +1,14 @@
+(:2. Počet fanúšikov všetkých tímov usporiadaný od najväčšieho.:)
+for $i in (0 to count(/root/teams/team/numberOfFans) - 1)
+return
+for $x in /root/teams/team/numberOfFans
+return
+if ($i = count(
+for $y in /root/teams/team/numberOfFans
+return
+if ($x < $y)
+then $y
+else ()
+))
+then $x
+else ()

@@ -1,0 +1,44 @@
+NHL franchise
+
+Tento model modeluje tímy v NHL, ich trénerov a hráčov, ktorí obliekajú vlastný dres a môžu nadobúdať sadu hráčskych schopností (x-faktorov).
+
+Popis tried:
+    1. Hráč
+        Hráč je základnou triedou tohto modelu, ktorý nadobúda atributy meno a prezývku(tých môže mať hráč viac alebo dokonca ani jednu)
+        Hráč môže byť súčasťou 1 tímu, na základe ktorého si oblieka aj príslušný dres. Okrem toho hráč ešte exceluje x-faktorom (rovnako nemusí mať ani jeden ale môže ich mať viac)
+        Atributy:
+            meno
+                - datový typ: text  
+            prezývka
+                - datový typ: text
+    2. Tím
+        Tím nadobúda atributy názov a počet_fanúšikov.
+        Tím môže mať viacerích hráčov a práve jedného trénera.
+        Atributy:
+            názov
+                - datový typ: text
+            počet_fanúšikov
+                - datový typ: číslo
+                - obmedzenie: počet_fanúšikov nemôže byť záporný
+    3. Tréner
+        Tréner je trieda, ktorá može byť súčasťou práve jedného tímu a nadobúda atributy level_skúseností a dátum narodenia.
+        Atributy:
+            level_skúseností
+                - datový typ: číslo (číslo od 1 do 10)
+            vek
+                - dátum narodenia: dátum
+    4. Dres
+        Dres si obliekajú hráči. Dres sa identifikuje vlastným číslom a veľkosťou.
+        Atributy: 
+            číslo
+                - datový typ: číslo (číslo od 1 do 99)
+            veľkosťou
+                - datový typ: text 
+    5. X-faktor
+        X-faktor je schopnosť, ktorou excelujú jednotlivý hráči.
+        X-faktor má vlastný názov a popis.
+        Atributy:
+            názov
+                - datový typ: text
+            popis
+                - datový typ: text 

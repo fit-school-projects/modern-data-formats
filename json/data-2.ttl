@@ -1,0 +1,23 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/vocabulary/> .
+
+@prefix plr: <http://example.org/players/> .
+@prefix jer: <http://example.org/jerseys/> .
+
+jer:jersey1 a ex:Jersey ;
+    ex:number 99 ;
+    ex:size "S"@en .
+jer:jersey2 a ex:Jersey ;
+    ex:number 20 ;
+    ex:size "L"@en .
+jer:jersey3 a ex:Jersey ;
+    ex:number 21 ;
+    ex:size "M"@en .
+jer:jersey4 a ex:Jersey ;
+    ex:number 86 ;
+    ex:size "L"@en .
+
+jer:jersey1 ex:isUsed plr:wayneGretzky .
+jer:jersey2 ex:isUsed plr:jurkoSlafkovsky .
+jer:jersey3 ex:isUsed plr:braydenPoint .
+jer:jersey4 ex:isUsed plr:nikitaKucherov .

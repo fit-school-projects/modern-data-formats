@@ -1,0 +1,55 @@
+{
+	"$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://example.org/teams-schema.json",
+    "type": "array",
+   	"title": "Teams",
+    "minItems": 1,
+    "items":{
+        "type": "object",
+        "title": "Team",
+        "properties": {
+            "type": {
+                "type": "string",
+                "format": "iri"
+            },
+            "iri": {
+                "type": "string",
+                "format": "iri"
+            },
+            "title": {
+                "type": "object",
+                "required": [
+                    "en"
+                ],
+                "properties": {
+                    "en": {
+                        "type": "string"
+                    }
+                }
+            },
+            "numberOfFans": {
+                "type": "number",
+                "format": "integer"
+            },
+            "trainees": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "iri"
+                }
+            },
+            "players": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "iri"
+                }
+            }
+        },
+        "required": [
+            "iri",
+            "title",
+            "numberOfFans"
+        ]
+    }
+}

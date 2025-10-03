@@ -1,0 +1,19 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/vocabulary/> .
+
+@prefix xfac: <http://example.org/x-factors/> .
+@prefix plr: <http://example.org/players/> .
+
+xfac:xfactor1 a ex:Xfactor ;
+    ex:title "Yoink!"@en ;
+    ex:description "Snatch that puck away with a higher stick lift success rate, and leave them hanging while they take longer than usual to recover from your trickery."@en .
+xfac:xfactor2 a ex:Xfactor ;
+    ex:title "Magnetic"@en ;
+    ex:description "Make that loose puck yours with this brilliant ability to pick up them up with speed, as well as coral bouncing or rolling pucks easily, and snatch up poor passes."@en .
+xfac:xfactor3 a ex:Xfactor ;
+    ex:title "Third eye"@en ;
+    ex:description "There are no blind spots for you when your Third Eye activates. Use this ability to hit seemingly impossible passes to teammates outside your field of vision."@en .
+
+xfac:xfactor1 ex:isPerformedBy plr:braydenPoint .
+xfac:xfactor2 ex:isPerformedBy plr:braydenPoint .
+xfac:xfactor1 ex:isPerformedBy plr:wayneGretzky .

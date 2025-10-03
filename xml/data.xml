@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+<coaches>
+    <coach>
+        <iri>http://example.org/coaches/jonCooper</iri>
+        <name xml:lang="en">Jon Cooper</name>
+        <levelOfExperience>7</levelOfExperience>
+        <dateOfBirth>1967-08-23</dateOfBirth>
+        <teams>
+            <teamIri>http://example.org/teams/tampaBayLightning</teamIri>
+        </teams>
+    </coach>
+    <coach>
+        <iri>http://example.org/coaches/martinStLuis</iri>
+        <name xml:lang="en">Martin St. Luis</name>
+        <levelOfExperience>3</levelOfExperience>
+        <dateOfBirth>1985-11-30</dateOfBirth>
+        <teams>
+            <teamIri>http://example.org/teams/montrealCanadiens</teamIri>
+        </teams>
+    </coach>
+</coaches>
+<jerseys>
+    <jersey>
+        <iri>http://example.org/jerseys/jersey1</iri>
+        <size xml:lang="en">S</size>
+        <number>99</number>
+        <players>
+            <playerIri>http://example.org/players/wayneGretzky</playerIri>
+        </players>
+    </jersey>
+    <jersey>
+        <iri>http://example.org/jerseys/jersey2</iri>
+        <size xml:lang="en">L</size>
+        <number>20</number>
+        <players>
+            <playerIri>http://example.org/players/jurkoSlafkovsky</playerIri>
+        </players>
+    </jersey>
+    <jersey>
+        <iri>http://example.org/jerseys/jersey3</iri>
+        <size xml:lang="en">M</size>
+        <number>21</number>
+        <players>
+            <playerIri>http://example.org/players/braydenPoint</playerIri>
+        </players>
+    </jersey>
+    <jersey>
+        <iri>http://example.org/jerseys/jersey4</iri>
+        <size xml:lang="en">L</size>
+        <number>86</number>
+        <players>
+            <playerIri>http://example.org/players/nikitaKucherov</playerIri>
+        </players>
+    </jersey>
+</jerseys>
+<teams>
+    <team>
+        <iri>http://example.org/teams/montrealCanadiens</iri>
+        <title xml:lang="en">Montreal Canadiens</title>
+        <numberOfFans>15000</numberOfFans>
+        <coaches>
+            <coachIri>http://example.org/coaches/martinStLuis</coachIri>
+        </coaches>
+        <players>
+            <playerIri>http://example.org/players/jurkoSlafkovsky</playerIri>
+        </players>
+    </team>
+    <team>
+        <iri>http://example.org/teams/tampaBayLightning</iri>
+        <title xml:lang="en">Tampa Bay Lightning</title>
+        <numberOfFans>21600</numberOfFans>
+        <coaches>
+            <coachIri>http://example.org/coaches/jonCooper</coachIri>
+        </coaches>
+        <players>
+            <playerIri>http://example.org/players/braydenPoint</playerIri>
+            <playerIri>http://example.org/players/nikitaKucherov</playerIri>
+        </players>
+    </team>
+</teams>
+<xfactors>
+    <xfactor>
+        <iri>http://example.org/x-factors/xfactor1</iri>
+        <title xml:lang="en">Yoink!</title>
+        <description xml:lang="en">Snatch that puck away with a higher stick lift success rate, and leave them hanging while they take longer than usual to recover from your trickery.</description>
+        <players>
+            <playerIri>http://example.org/players/wayneGretzky</playerIri>
+            <playerIri>http://example.org/players/braydenPoint</playerIri>
+        </players>
+    </xfactor>
+    <xfactor>
+        <iri>http://example.org/x-factors/xfactor2</iri>
+        <title xml:lang="en">Magnetic</title>
+        <description xml:lang="en">Make that loose puck yours with this brilliant ability to pick up them up with speed, as well as coral bouncing or rolling pucks easily, and snatch up poor passes.</description>
+        <players>
+            <playerIri>http://example.org/players/braydenPoint</playerIri>
+        </players>
+    </xfactor>
+    <xfactor>
+        <iri>http://example.org/x-factors/xfactor3</iri>
+        <title xml:lang="en">Third eye</title>
+        <description xml:lang="en">There are no blind spots for you when your Third Eye activates. Use this ability to hit seemingly impossible passes to teammates outside your field of vision.</description>
+        <players></players>
+    </xfactor>
+</xfactors>
+<players>
+    <player>
+        <iri>http://example.org/players/wayneGretzky</iri>
+        <name xml:lang="en">Wayne Gretzky</name>
+        <nicknames>
+            <nickname xml:lang="en">The Great One</nickname>
+        </nicknames>
+        <jerseys>
+            <jerseyIri>http://example.org/jerseys/jersey1</jerseyIri>
+        </jerseys>
+        <xfactors>
+            <xfactorIri>http://example.org/x-factors/xfactor1</xfactorIri>
+        </xfactors>
+        <teams></teams>
+    </player>
+    <player>
+        <iri>http://example.org/players/braydenPoint</iri>
+        <name xml:lang="en">Brayden Point</name>
+        <nicknames>
+            <nickname xml:lang="en">foody</nickname>
+        </nicknames>
+        <jerseys>
+            <jerseyIri>http://example.org/jerseys/jersey3</jerseyIri>
+        </jerseys>
+        <xfactors>
+            <xfactorIri>http://example.org/x-factors/xfactor1</xfactorIri>
+            <xfactorIri>http://example.org/x-factors/xfactor2</xfactorIri>
+        </xfactors>
+        <teams>
+            <teamIri>http://example.org/teams/tampaBayLightning</teamIri>
+        </teams>
+    </player>
+    <player>
+        <iri>http://example.org/players/nikitaKucherov</iri>
+        <name xml:lang="en">Nikita Kucherov</name>
+        <nicknames>
+            <nickname xml:lang="en">sneaky</nickname>
+        </nicknames>
+        <jerseys>
+            <jerseyIri>http://example.org/jerseys/jersey4</jerseyIri>
+        </jerseys>
+        <xfactors></xfactors>
+        <teams>
+            <teamIri>http://example.org/teams/tampaBayLightning</teamIri>
+        </teams>
+    </player>
+    <player>
+        <iri>http://example.org/players/jurkoSlafkovsky</iri>
+        <name xml:lang="en">Juraj Slafkovsky</name>
+        <nicknames>
+            <nickname xml:lang="en">slafgoalsky</nickname>
+            <nickname xml:lang="en">newbie</nickname>
+        </nicknames>
+        <jerseys>
+            <jerseyIri>http://example.org/jerseys/jersey2</jerseyIri>
+        </jerseys>
+        <xfactors></xfactors>
+        <teams>
+            <teamIri>http://example.org/teams/montrealCanadiens</teamIri>
+        </teams>
+    </player>
+</players>
+
+</root>

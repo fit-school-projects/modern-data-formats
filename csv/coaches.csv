@@ -1,0 +1,3 @@
+iri,name,levelOfExperience,dateOfBirth,team_iri
+http://example.org/coaches/martinStLuis,Martin St. Luis,3,1985-11-30,http://example.org/teams/montrealCanadiens
+http://example.org/coaches/jonCooper,Jon Cooper,7,1967-08-23,http://example.org/teams/tampaBayLightning

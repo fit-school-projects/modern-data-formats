@@ -1,0 +1,20 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/vocabulary/> .
+
+@prefix coach: <http://example.org/coaches/> . 
+@prefix team: <http://example.org/teams/> . 
+@prefix plr: <http://example.org/players/> .
+
+team:tampaBayLightning a ex:Team ;
+    ex:title "Tampa Bay Lightning"@en ;
+    ex:numberOfFans 21600 .
+team:montrealCanadiens a ex:Team ;
+    ex:title "Montreal Canadiens"@en ;
+    ex:numberOfFans 15000 .
+
+team:tampaBayLightning ex:isCoached coach:jonCooper .
+team:montrealCanadiens ex:isCoached coach:martinStLuis .
+
+team:tampaBayLightning ex:isFormedBy plr:nikitaKucherov .
+team:tampaBayLightning ex:isFormedBy plr:braydenPoint .
+team:montrealCanadiens ex:isFormedBy plr:jurkoSlafkovsky .

@@ -1,0 +1,2 @@
+(: 1. Hráči s číslom dresu 21 a x-faktorom s názvom Yoink! :)
+/root/players/player[iri = //xfactor[title/text()="Yoink!"]/players/playerIri and iri = //jersey[number=21]/players/playerIri]/name

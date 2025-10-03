@@ -1,0 +1,75 @@
+[
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "coach": "http://example.org/coaches/",
+            "team": "http://example.org/teams/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "name": {
+                "@id": "ex:name",
+                "@container": "@language" 
+            },
+            "levelOfExperience": {
+                "@id": "ex:levelOfExperience",
+                "@type": "xsd:integer"
+            },
+            "dateOfBirth": {
+                "@id": "ex:dateOfBirth",
+                "@type": "xsd:date"
+            },
+            "teams": {
+                "@id": "ex:coaches",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Coach",
+        "iri": "coach:jonCooper",
+        "name": {
+            "en": "Jon Cooper"
+        },
+        "levelOfExperience": 7,
+        "dateOfBirth": "1967-08-23",
+        "teams": [
+            "team:tampaBayLightning"
+        ]      
+    },
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "coach": "http://example.org/coaches/",
+            "team": "http://example.org/teams/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "name": {
+                "@id": "ex:name",
+                "@container": "@language" 
+            },
+            "levelOfExperience": {
+                "@id": "ex:levelOfExperience",
+                "@type": "xsd:integer"
+            },
+            "dateOfBirth": {
+                "@id": "ex:dateOfBirth",
+                "@type": "xsd:date"
+            },
+            "teams": {
+                "@id": "ex:coaches",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Coach",
+        "iri": "coach:martinStLuis",
+        "name": {
+            "en": "Martin St. Luis"
+        },
+        "levelOfExperience": 3,
+        "dateOfBirth": "1985-11-30",
+        "teams": [
+            "team:montrealCanadiens"
+        ]
+    }
+]
+

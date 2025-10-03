@@ -1,0 +1,2 @@
+(:3. Hráči z Tampy Bay Lightning s dresom veľkosti M.:)
+/root/players/player[iri = //team[title/text()="Tampa Bay Lightning"]/players/playerIri and iri = //jersey[size/text()="M"]/players/playerIri]/name

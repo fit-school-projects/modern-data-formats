@@ -1,0 +1,99 @@
+[
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "xfac": "http://example.org/x-factors/",
+            "plr": "http://example.org/players/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "title": {
+                "@id": "ex:title",
+                "@container": "@language" 
+            },
+            "description": {
+                "@id": "ex:description",
+                "@container": "@language"
+            },
+            "players": {
+                "@id": "ex:isPerformedBy",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Xfactor",
+        "iri": "xfac:xfactor1",
+        "title": {
+            "en":  "Yoink!"
+        },
+        "description": {
+            "en": "Snatch that puck away with a higher stick lift success rate, and leave them hanging while they take longer than usual to recover from your trickery."
+        },
+        "players": [
+            "plr:braydenPoint",
+            "plr:wayneGretzky"
+        ]
+    },
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "xfac": "http://example.org/x-factors/",
+            "plr": "http://example.org/players/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "title": {
+                "@id": "ex:title",
+                "@container": "@language" 
+            },
+            "description": {
+                "@id": "ex:description",
+                "@container": "@language"
+            },
+            "players": {
+                "@id": "ex:isPerformedBy",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Xfactor",
+        "iri": "xfac:xfactor2",
+        "title": {
+            "en":  "Magnetic"
+        },
+        "description": {
+            "en": "Make that loose puck yours with this brilliant ability to pick up them up with speed, as well as coral bouncing or rolling pucks easily, and snatch up poor passes."
+        },
+        "players": [
+            "plr:braydenPoint"
+        ]
+    },
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "xfac": "http://example.org/x-factors/",
+            "plr": "http://example.org/players/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "title": {
+                "@id": "ex:title",
+                "@container": "@language" 
+            },
+            "description": {
+                "@id": "ex:description",
+                "@container": "@language"
+            },
+            "players": {
+                "@id": "ex:isPerformedBy",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Xfactor",
+        "iri": "xfac:xfactor3",
+        "title": {
+            "en":  "Third eye"
+        },
+        "description": {
+            "en": "There are no blind spots for you when your Third Eye activates. Use this ability to hit seemingly impossible passes to teammates outside your field of vision."
+        }
+    }
+]

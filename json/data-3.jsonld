@@ -1,0 +1,81 @@
+[    
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "team": "http://example.org/teams/",
+            "coach": "http://example.org/coaches/",
+            "plr": "http://example.org/players/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "title": {
+                "@id": "ex:title",
+                "@container": "@language" 
+            },
+            "numberOfFans": {
+                "@id": "ex:numberOfFans",
+                "@type": "xsd:integer"
+            },
+            "trainees": {
+                "@id": "ex:isCoached",
+                "@type": "@id"
+            },
+            "players": {
+                "@id": "ex:isFormedBy",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Team",
+        "iri": "team:tampaBayLightning",
+        "title": {
+            "en":  "Tampa Bay Lightning"
+        },
+        "numberOfFans": 21600,
+        "trainees": [
+            "coach:jonCooper"
+        ],
+        "players": [
+            "plr:nikitaKucherov",
+            "plr:braydenPoint"
+        ]
+    },
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "team": "http://example.org/teams/",
+            "coach": "http://example.org/coaches/",
+            "plr": "http://example.org/players/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "title": {
+                "@id": "ex:title",
+                "@container": "@language" 
+            },
+            "numberOfFans": {
+                "@id": "ex:numberOfFans",
+                "@type": "xsd:integer"
+            },
+            "trainees": {
+                "@id": "ex:isCoached",
+                "@type": "@id"
+            },
+            "players": {
+                "@id": "ex:isFormedBy",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Team",
+        "iri": "team:montrealCanadiens",
+        "title": {
+            "en":  "Montreal Canadiens"
+        },
+        "numberOfFans": 15000,
+        "trainees": [
+            "coach:martinStLuis"
+        ],
+        "players": [
+            "plr:jurkoSlafkovsky"
+        ]
+    }
+]

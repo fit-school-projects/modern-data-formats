@@ -1,0 +1,199 @@
+[
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "plr": "http://example.org/players/",
+            "jer": "http://example.org/jerseys/",
+            "xfac": "http://example.org/x-factors/",
+            "team": "http://example.org/teams/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "name": {
+                "@id": "ex:name",
+                "@container": "@language"
+            },
+            "nickname": {
+                "@id": "ex:nickname",
+                "@container": "@language" 
+            },
+            "jerseys": {
+                "@id": "ex:wears",
+                "@type": "@id"
+            },
+            "xfactors": {
+                "@id": "ex:excels",
+                "@type": "@id"
+            },
+            "teams": {
+                "@id": "ex:plays",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Player",
+        "iri": "plr:wayneGretzky",
+        "name": {
+            "en": "Wayne Gretzky"
+        },
+        "nickname": {
+            "en": [
+                "The Great One"
+            ]
+        },
+        "jerseys": [
+            "jer:jersey1"
+        ],
+        "xfactors": [
+            "xfac:xfactor1"
+        ]
+    },
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "plr": "http://example.org/players/",
+            "jer": "http://example.org/jerseys/",
+            "xfac": "http://example.org/x-factors/",
+            "team": "http://example.org/teams/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "name": {
+                "@id": "ex:name",
+                "@container": "@language"
+            },
+            "nickname": {
+                "@id": "ex:nickname",
+                "@container": "@language" 
+            },
+            "jerseys": {
+                "@id": "ex:wears",
+                "@type": "@id"
+            },
+            "xfactors": {
+                "@id": "ex:excels",
+                "@type": "@id"
+            },
+            "teams": {
+                "@id": "ex:plays",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Player",
+        "iri": "plr:jurkoSlafkovsky",
+        "name": {
+            "en": "Juraj Slafkovsky"
+        },
+        "nickname": {
+            "en": [
+                "newbie",
+                "slafgoalsky"
+            ]
+        },
+        "jerseys": [
+            "jer:jersey2"
+        ],
+        "teams": [
+            "team:montrealCanadiens"
+        ]
+    },
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "plr": "http://example.org/players/",
+            "jer": "http://example.org/jerseys/",
+            "xfac": "http://example.org/x-factors/",
+            "team": "http://example.org/teams/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "name": {
+                "@id": "ex:name",
+                "@container": "@language"
+            },
+            "nickname": {
+                "@id": "ex:nickname",
+                "@container": "@language" 
+            },
+            "jerseys": {
+                "@id": "ex:wears",
+                "@type": "@id"
+            },
+            "xfactors": {
+                "@id": "ex:excels",
+                "@type": "@id"
+            },
+            "teams": {
+                "@id": "ex:plays",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Player",
+        "iri": "plr:braydenPoint",
+        "name": {
+            "en": "Brayden Point"
+        },
+        "nickname": {
+            "en": [
+                "foody"
+            ]
+        },
+        "jerseys": [
+            "jer:jersey3"
+        ],
+        "xfactors": [
+            "xfac:xfactor1",
+            "xfac:xfactor2"
+        ],
+        "teams": [
+            "team:tampaBayLightning"
+        ]
+    },
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "plr": "http://example.org/players/",
+            "jer": "http://example.org/jerseys/",
+            "xfac": "http://example.org/x-factors/",
+            "team": "http://example.org/teams/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "type": "@type",
+            "iri": "@id",
+            "name": {
+                "@id": "ex:name",
+                "@container": "@language"
+            },
+            "nickname": {
+                "@id": "ex:nickname",
+                "@container": "@language" 
+            },
+            "jerseys": {
+                "@id": "ex:wears",
+                "@type": "@id"
+            },
+            "xfactors": {
+                "@id": "ex:excels",
+                "@type": "@id"
+            },
+            "teams": {
+                "@id": "ex:plays",
+                "@type": "@id"
+            }
+        },
+        "type": "ex:Player",
+        "iri": "plr:nikitaKucherov",
+        "name": {
+            "en": "Nikita Kucherov"
+        },
+        "nickname": {
+            "en": [
+                "sneaky"
+            ]
+        },
+        "jerseys": [
+            "jer:jersey4"
+        ],
+        "teams": [
+            "team:tampaBayLightning"
+        ]
+    }
+]

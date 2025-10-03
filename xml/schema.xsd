@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="https://www.w3.org/2009/01/xml.xsd" />
+
+<xs:complexType name="str"> 
+    <xs:simpleContent>
+        <xs:extension base="xs:string">
+            <xs:attribute ref="xml:lang" use="required"/>
+        </xs:extension> 
+    </xs:simpleContent>
+</xs:complexType>
+<xs:element name="root">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="coaches">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="coach" maxOccurs="unbounded" minOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="iri" type="xs:anyURI"/>
+                                    <xs:element name="name" type="str"/>
+                                    <xs:element name="levelOfExperience" type="xs:integer"/>
+                                    <xs:element name="dateOfBirth" type="xs:date"/>
+                                    <xs:element name="teams">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="teamIri" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="jerseys">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="jersey" maxOccurs="unbounded" minOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="iri" type="xs:anyURI"/>
+                                    <xs:element name="size" type="str"/>
+                                    <xs:element name="number" type="xs:integer"/>
+                                    <xs:element name="players">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="playerIri" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="teams">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="team" maxOccurs="unbounded" minOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="iri" type="xs:anyURI"/>
+                                    <xs:element name="title" type="str"/>
+                                    <xs:element name="numberOfFans" type="xs:integer"/>
+                                    <xs:element name="coaches">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="coachIri" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="players">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="playerIri" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="xfactors">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="xfactor" maxOccurs="unbounded" minOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="iri" type="xs:anyURI"/>
+                                    <xs:element name="title" type="str"/>
+                                    <xs:element name="description" type="str"/>
+                                    <xs:element name="players">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="playerIri" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+
+            <xs:element name="players">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="player" maxOccurs="unbounded" minOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="iri" type="xs:anyURI"/>
+                                    <xs:element name="name" type="str"/>
+                                    <xs:element name="nicknames">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="nickname" type="str" minOccurs="0" maxOccurs="unbounded"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="jerseys">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="jerseyIri" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="xfactors">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="xfactorIri" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                    <xs:element name="teams">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="teamIri" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>

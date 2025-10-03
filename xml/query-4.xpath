@@ -1,0 +1,2 @@
+(:Hráči, ktorých číslo dresu je väčšie ako 50:)
+/root/players/player[iri = //jersey[number > 50]/players/playerIri]/name

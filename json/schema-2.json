@@ -1,0 +1,49 @@
+{
+	"$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://example.org/jerseys-schema.json",
+    "type": "array",
+   	"title": "Jerseys",
+    "minItems": 1,
+    "items":{
+        "type": "object",
+        "title": "Jersey",
+        "properties": {
+            "type": {
+                "type": "string",
+                "format": "iri"
+            },
+            "iri": {
+                "type": "string",
+                "format": "iri"
+            },
+            "size": {
+                "type": "object",
+                "required": [
+                    "en"
+                ],
+                "properties": {
+                    "en": {
+                        "type": "string"
+                    }
+                }
+            },
+            "number": {
+                "type": "number",
+                "format": "integer"
+            },
+            "players": {
+                "type": "array",
+                "items": {
+                    "type": "string",
+                    "format": "iri"
+                }
+            }
+        },
+        "required": [
+            "iri",
+            "size",
+            "number"
+        ]
+    }
+}
+

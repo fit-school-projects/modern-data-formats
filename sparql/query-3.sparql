@@ -1,0 +1,17 @@
+# Dotaz zobrazí, či je v tíme Montreal Canadiens tréner so skúsenosťami väčšími než 5
+
+prefix ex: <http://example.org/vocabulary/>
+prefix coach: <http://example.org/coaches/>  
+prefix jer: <http://example.org/jerseys/> 
+prefix team: <http://example.org/teams/>  
+prefix xfac: <http://example.org/x-factors/> 
+prefix plr: <http://example.org/players>
+
+ASK {
+	?coach a ex:Coach ;
+  		ex:levelOfExperience ?levelOfExperience ;
+  	 	ex:coaches ?team .
+ 	?team ex:title ?title .
+  	FILTER(STRSTARTS(?title, "Montreal Canadiens"))
+  FILTER(?levelOfExperience > 5)
+}
