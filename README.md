@@ -1,6 +1,6 @@
 # Moderné dátové formáty v praxi
 
-Projekt v rámci predmetu BU-MDF zameraný na modelovanie dát a ich reprezentáciu v rôznych formátoch (RDF, SPARQL, JSON, CSV, XML), vrátane dotazovania a transformácií.
+Projekt v rámci predmetu BI-MDF zameraný na modelovanie dát a ich reprezentáciu v rôznych formátoch (RDF, SPARQL, JSON, CSV, XML), vrátane dotazovania a transformácií.
 
 Name: *Andrej Meliska* (melisand)
 
